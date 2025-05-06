@@ -1,42 +1,7 @@
 @import url(../../app/globals.css);
 
-.taskFormContainer {
- padding: 20px;
- border: 1px var(--foreground) solid;
- border-radius: 20px;
- transition: var(--transition);
-
- &:hover {
-  border-width: 6px;
-  box-shadow: var(--box-shadow);
- }
-}
-
-.taskForm {
+.tasksList {
  display: flex;
- align-items: center;
- gap: 16px;
-
- &Btn {
-  color: var(--foreground);
-  padding: 20px;
-  border-radius: 20px;
-  background-color: transparent;
-  border: 1px solid var(--foreground);
-  cursor: pointer;
-  transition: var(--transition);
-
-  &:hover {
-   border-radius: 8px;
-   background-color: var(--foreground);
-   color: var(--background);
-   box-shadow: var(--box-shadow);
-   transform: var(--scale);
-  }
-
-  &:active {
-   transform: scale(0.98);
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
- }
+ flex-direction: column;
+ max-width: 305px;
 }

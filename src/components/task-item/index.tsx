@@ -1,4 +1,6 @@
 import { FC } from "react"
+import Button from "../btn"
+import styles from './index.module.scss'
 
 export interface Task {
     id: string
@@ -6,10 +8,14 @@ export interface Task {
 }
 
 const TaskItem: FC<Task> = ({ id, label }) => {
-    return <div>
-        <p>{label}</p>
-        <button>edit</button>
-        <button>delete</button>
+    return <div className={styles.taskItemContainer}>
+        <div className={styles.taskItemInfoContianer}>
+            <p>{label}</p>
+        </div>
+        <div className={styles.taskItemBtnsWrapper}>
+            <Button text="Edit" type="button" />
+            <Button text="Delete" type="button" isDanger />
+        </div>
     </div>
 }
 

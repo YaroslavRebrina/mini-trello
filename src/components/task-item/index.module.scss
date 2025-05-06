@@ -1,0 +1,32 @@
+@import url(../../app/globals.css);
+
+.taskItem {
+ &Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: 1px var(--golden) solid;
+  margin-top: 16px;
+  min-width: 305px;
+  max-width: 305px;
+
+  transition: var(--transition);
+
+  &:hover {
+   border-width: 6px;
+  }
+ }
+
+ &InfoContianer {
+  display: flex;
+  gap: 24px;
+ }
+
+ &BtnsWrapper {
+  display: flex;
+  gap: 24px;
+ }
+}
