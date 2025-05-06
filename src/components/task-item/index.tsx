@@ -7,7 +7,7 @@ export interface Task {
     label: string
 }
 
-const TaskItem: FC<Task> = ({ id, label }) => {
+const TaskItem: FC<Task> = ({ label }) => {
     return <div className={styles.taskItemContainer}>
         <div className={styles.taskItemInfoContianer}>
             <p>{label}</p>
