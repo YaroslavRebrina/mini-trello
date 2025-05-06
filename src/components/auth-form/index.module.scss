@@ -1,0 +1,51 @@
+@import url(../../app/globals.css);
+
+.loginForm {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+
+ &Input {
+  height: 36px;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  transition: var(--transition);
+
+  &:hover {
+   border-radius: 8px;
+   background-color: var(--foreground);
+   color: var(--background);
+   box-shadow: var(--box-shadow);
+   transform: var(--scale);
+  }
+
+  &:active {
+   transform: scale(0.98);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+ }
+
+ &Btn {
+  color: var(--foreground);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid var(--foreground);
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+   border-radius: 8px;
+   background-color: var(--foreground);
+   color: var(--background);
+   box-shadow: var(--box-shadow);
+   transform: var(--scale);
+  }
+
+  &:active {
+   transform: scale(0.98);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+ }
+}
