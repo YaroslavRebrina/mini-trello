@@ -1,5 +1,6 @@
 import { FC } from "react"
-import { Task } from "../task-item"
+import TaskItem, { Task } from "../task-item"
+import styles from './index.module.scss'
 
 
 interface TasksListProps {
@@ -8,7 +9,9 @@ interface TasksListProps {
 
 const TasksList: FC<TasksListProps> = ({ tasks }) => {
     return (
-        tasks.map(t => <TaskItem {...t} />)
+        <div className={styles.tasksList}>
+            {tasks.map(t => <TaskItem key={t.id} {...t} />)}
+        </div>
     )
 }
 

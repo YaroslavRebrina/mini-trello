@@ -1,18 +1,18 @@
-@import url(../../app/globals.css);
+@import '../../app/variables.scss';
 
 .input {
  height: 36px;
  border-radius: 20px;
  border: none;
  padding: 20px;
- transition: var(--transition);
+ transition: $transition;
 
  &:hover {
   border-radius: 8px;
-  background-color: var(--foreground);
-  color: var(--background);
-  box-shadow: var(--box-shadow);
-  transform: var(--scale);
+  background-color: $foreground;
+  color: $background;
+  box-shadow: $box-shadow;
+  transform: $scale;
  }
 
  &:active {
