@@ -5,12 +5,14 @@ import styles from './index.module.scss'
 
 interface TasksListProps {
     tasks: Task[]
+    onAction: (loading: boolean) => void;
 }
 
-const TasksList: FC<TasksListProps> = ({ tasks }) => {
+const TasksList: FC<TasksListProps> = ({ tasks, onAction }) => {
+
     return (
         <div className={styles.tasksList}>
-            {tasks.map(t => <TaskItem key={t.id} {...t} />)}
+            {tasks.map(t => <TaskItem key={t._id}  {...t} onAction={onAction} />)}
         </div>
     )
 }
